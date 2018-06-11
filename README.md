@@ -1,6 +1,5 @@
 # Pixelnetica Document Scanning SDK Demo application for Xamarin.iOS
-This demo application provided to demonstrate main [Document Scanning SDK](http://www.pixelnetica.com/products/document-scanning-sdk/document-scanning-sdk-features.html "Document Scanning SDK: Main Features and Benefits")* (_DSSDK_) features and the way how they should be used in real Xamarin application.  
-*Former _Document Imaging SDK_
+This demo application provided to demonstrate main [Document Scanning SDK](http://www.pixelnetica.com/products/document-scanning-sdk/document-scanning-sdk-features.html "Document Scanning SDK: Main Features and Benefits") (_DSSDK_) features and the way how they should be used in real Xamarin application.
 
 __⚠️ Important Note.__  
 Demo application source code provided __“as is”__ without warranties of any kind. It could be freely used in commercial product __only__ in case of commercial DSSDK license purchase.
@@ -14,7 +13,7 @@ For more information about DSSDK main Features and Benefits please visit [Pixeln
 ## Documentation
 The documentation for DSSDK Xamarin.iOS can be found by the link below:
 
-* [Pixelnetica Document Scanning SDK for Xamarin.Android documentation](https://pixelnetica.github.io/Document-Scanning-SDK-Documentation/Xamarin-iOS/ "DSSDKD for Xamarin-iOS Documentation")
+* [Pixelnetica Document Scanning SDK for Xamarin.iOS documentation](https://pixelnetica.github.io/Document-Scanning-SDK-Documentation/Xamarin-iOS/ "DSSDKD for Xamarin-iOS Documentation")
 
 ## License
 
