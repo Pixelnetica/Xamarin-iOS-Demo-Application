@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectGuid>{723FD28F-DB3E-4A65-A22D-171955427051}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>DSSDKdemo</RootNamespace>
+    <AssemblyName>DSSDK-demo</AssemblyName>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchFastDev>true</MtouchFastDev>
+    <IOSDebuggerPort>53382</IOSDebuggerPort>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <DeviceSpecificBuild>false</DeviceSpecificBuild>
+    <MtouchVerbosity></MtouchVerbosity>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <DefineConstants></DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>Full</MtouchLink>
+    <MtouchArch>ARMv7, ARMv7s, ARM64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchVerbosity></MtouchVerbosity>
+    <MtouchUseLlvm>true</MtouchUseLlvm>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <DefineConstants></DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchLink>Full</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchVerbosity></MtouchVerbosity>
+    <MtouchUseLlvm>true</MtouchUseLlvm>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchFastDev>true</MtouchFastDev>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <IOSDebuggerPort>17265</IOSDebuggerPort>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>ARMv7, ARMv7s, ARM64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchVerbosity></MtouchVerbosity>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="DSSDKWrapper">
+      <HintPath>..\packages\DocScanningSDK.Pixelnetica.1.0.0\lib\xamarinios10\DSSDKWrapper.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\batch_radio_rotate_ccw.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\batch_radio_rotate_cw.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\camera-torch.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\camera-torch_off.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\lba.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\lbn.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\lta.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ltn.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\photoSnap.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\profile_button_bw.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\profile_button_color.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\profile_button_gray.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\profile_button_original.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\rba.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\rbn.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\rta.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\rtn.imageset\Contents.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="LaunchScreen.storyboard" />
+    <InterfaceDefinition Include="CameraViewController.xib" />
+    <InterfaceDefinition Include="PageEditorController.xib" />
+    <InterfaceDefinition Include="SettingsProfileTableViewCell.xib" />
+    <InterfaceDefinition Include="SettingsTableViewCell.xib" />
+    <InterfaceDefinition Include="SettingsViewController.xib" />
+    <InterfaceDefinition Include="TextTableViewCell.xib" />
+    <InterfaceDefinition Include="AboutViewController.xib" />
+    <InterfaceDefinition Include="MainWindow.xib" />
+    <InterfaceDefinition Include="PhotoSliderViewController.xib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="PhotoSliderAppDelegate.cs" />
+    <Compile Include="PhotoSliderViewController.cs" />
+    <Compile Include="PhotoSliderViewController.designer.cs">
+      <DependentUpon>PhotoSliderViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AboutViewController.cs" />
+    <Compile Include="AboutViewController.designer.cs">
+      <DependentUpon>AboutViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CameraViewController.cs" />
+    <Compile Include="CameraViewController.designer.cs">
+      <DependentUpon>CameraViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PageEditorController.cs" />
+    <Compile Include="PageEditorController.designer.cs">
+      <DependentUpon>PageEditorController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsProfileTableViewCell.cs" />
+    <Compile Include="SettingsProfileTableViewCell.designer.cs">
+      <DependentUpon>SettingsProfileTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewController.cs" />
+    <Compile Include="SettingsViewController.designer.cs">
+      <DependentUpon>SettingsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsTableViewCell.cs" />
+    <Compile Include="SettingsTableViewCell.designer.cs">
+      <DependentUpon>SettingsTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TextTableViewCell.cs" />
+    <Compile Include="TextTableViewCell.designer.cs">
+      <DependentUpon>TextTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImageUtils.cs" />
+    <Compile Include="SysUtils.cs" />
+    <Compile Include="MyImageView.cs" />
+    <Compile Include="MyImageView.designer.cs">
+      <DependentUpon>MyImageView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OverlayView.cs" />
+    <Compile Include="OverlayView.designer.cs">
+      <DependentUpon>OverlayView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CameraView.cs" />
+    <Compile Include="CameraView.designer.cs">
+      <DependentUpon>CameraView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CircularProgressView.cs" />
+    <Compile Include="CircularProgressView.designer.cs">
+      <DependentUpon>CircularProgressView.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\batch_radio_rotate_ccw.png" />
+    <BundleResource Include="Resources\batch_radio_rotate_ccw%402x.png" />
+    <BundleResource Include="Resources\batch_radio_rotate_ccw%403x.png" />
+    <BundleResource Include="Resources\batch_radio_rotate_cw.png" />
+    <BundleResource Include="Resources\batch_radio_rotate_cw%402x.png" />
+    <BundleResource Include="Resources\batch_radio_rotate_cw%403x.png" />
+    <BundleResource Include="Resources\camera-torch.png" />
+    <BundleResource Include="Resources\camera-torch%402x.png" />
+    <BundleResource Include="Resources\camera-torch%403x.png" />
+    <BundleResource Include="Resources\camera-torch_off.png" />
+    <BundleResource Include="Resources\camera-torch_off%402x.png" />
+    <BundleResource Include="Resources\camera-torch_off%403x.png" />
+    <BundleResource Include="Resources\lba.png" />
+    <BundleResource Include="Resources\lbn.png" />
+    <BundleResource Include="Resources\lta.png" />
+    <BundleResource Include="Resources\ltn.png" />
+    <BundleResource Include="Resources\photoSnap.png" />
+    <BundleResource Include="Resources\photoSnap%402x.png" />
+    <BundleResource Include="Resources\photoSnap%403x.png" />
+    <BundleResource Include="Resources\profile_button_bw.png" />
+    <BundleResource Include="Resources\profile_button_bw%402x.png" />
+    <BundleResource Include="Resources\profile_button_bw%403x.png" />
+    <BundleResource Include="Resources\profile_button_color.png" />
+    <BundleResource Include="Resources\profile_button_color%402x.png" />
+    <BundleResource Include="Resources\profile_button_color%403x.png" />
+    <BundleResource Include="Resources\profile_button_gray.png" />
+    <BundleResource Include="Resources\profile_button_gray%402x.png" />
+    <BundleResource Include="Resources\profile_button_gray%403x.png" />
+    <BundleResource Include="Resources\profile_button_original.png" />
+    <BundleResource Include="Resources\profile_button_original%402x.png" />
+    <BundleResource Include="Resources\profile_button_original%403x.png" />
+    <BundleResource Include="Resources\rba.png" />
+    <BundleResource Include="Resources\rbn.png" />
+    <BundleResource Include="Resources\rta.png" />
+    <BundleResource Include="Resources\rtn.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+</Project>

@@ -1,0 +1,33 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSSDK-demo", "DSSDK-demo\DSSDK-demo.csproj", "{723FD28F-DB3E-4A65-A22D-171955427051}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhone = Release|iPhone
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{723FD28F-DB3E-4A65-A22D-171955427051}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
+		{723FD28F-DB3E-4A65-A22D-171955427051}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
+		{723FD28F-DB3E-4A65-A22D-171955427051}.Release|Any CPU.ActiveCfg = Release|iPhone
+		{723FD28F-DB3E-4A65-A22D-171955427051}.Release|Any CPU.Build.0 = Release|iPhone
+		{723FD28F-DB3E-4A65-A22D-171955427051}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{723FD28F-DB3E-4A65-A22D-171955427051}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{723FD28F-DB3E-4A65-A22D-171955427051}.Release|iPhone.ActiveCfg = Release|iPhone
+		{723FD28F-DB3E-4A65-A22D-171955427051}.Release|iPhone.Build.0 = Release|iPhone
+		{723FD28F-DB3E-4A65-A22D-171955427051}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{723FD28F-DB3E-4A65-A22D-171955427051}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{723FD28F-DB3E-4A65-A22D-171955427051}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{723FD28F-DB3E-4A65-A22D-171955427051}.Debug|iPhone.Build.0 = Debug|iPhone
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		Policies = $0
+		$0.StandardHeader = $1
+	EndGlobalSection
+EndGlobal

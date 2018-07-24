@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PageEditorController">
+            <connections>
+                <outlet property="ImageView" destination="21" id="name-outlet-21"/>
+                <outlet property="ProcessButton" destination="7" id="name-outlet-7"/>
+                <outlet property="view" destination="1" id="3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <navigationBar tag="100" contentMode="scaleToFill" barStyle="blackTranslucent" translatesAutoresizingMaskIntoConstraints="NO" id="4">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="hyj-22-6Yg"/>
+                    </constraints>
+                    <items>
+                        <navigationItem title="Select Area" id="5">
+                            <barButtonItem key="leftBarButtonItem" title="Cancel" id="46">
+                                <connections>
+                                    <action selector="CancelAction:" destination="-1" id="47"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem key="rightBarButtonItem" title="Process" id="7">
+                                <connections>
+                                    <action selector="ProcessAction:" destination="-1" id="41"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" tag="101" contentMode="scaleToFill" barStyle="blackTranslucent" translatesAutoresizingMaskIntoConstraints="NO" id="10">
+                    <rect key="frame" x="0.0" y="692" width="414" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="3dT-m7-Ckv"/>
+                    </constraints>
+                    <items>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="14"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="16"/>
+                    </items>
+                </toolbar>
+                <view clipsSubviews="YES" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="21" customClass="MyImageView">
+                    <rect key="frame" x="0.0" y="44" width="414" height="648"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="10" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="0m2-S2-1nE"/>
+                <constraint firstItem="21" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="3Gf-wN-F9N"/>
+                <constraint firstAttribute="bottom" secondItem="10" secondAttribute="bottom" id="4tg-wx-GaQ"/>
+                <constraint firstItem="10" firstAttribute="top" secondItem="21" secondAttribute="bottom" id="6YT-ZB-hcm"/>
+                <constraint firstItem="21" firstAttribute="top" secondItem="4" secondAttribute="bottom" id="OrQ-BQ-dMG"/>
+                <constraint firstItem="4" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="YBk-oJ-VCF"/>
+                <constraint firstAttribute="trailing" secondItem="4" secondAttribute="trailing" id="YpJ-mZ-9i0"/>
+                <constraint firstAttribute="trailing" secondItem="10" secondAttribute="trailing" id="bR4-Vo-mrq"/>
+                <constraint firstItem="4" firstAttribute="top" secondItem="1" secondAttribute="top" id="hfw-6Q-fyh"/>
+                <constraint firstAttribute="trailing" secondItem="21" secondAttribute="trailing" id="yiN-h9-mbb"/>
+            </constraints>
+            <point key="canvasLocation" x="34" y="54"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="batch_radio_rotate_ccw.png" width="29" height="29"/>
+        <image name="batch_radio_rotate_cw.png" width="29" height="29"/>
+        <image name="camera-torch.png" width="20" height="20"/>
+        <image name="camera-torch_off.png" width="20" height="20"/>
+        <image name="lba.png" width="10" height="10"/>
+        <image name="lbn.png" width="10" height="10"/>
+        <image name="lta.png" width="10" height="10"/>
+        <image name="ltn.png" width="10" height="10"/>
+        <image name="photoSnap.png" width="67" height="67"/>
+        <image name="profile_button_bw.png" width="20" height="20"/>
+        <image name="profile_button_color.png" width="20" height="20"/>
+        <image name="profile_button_gray.png" width="20" height="20"/>
+        <image name="profile_button_original.png" width="20" height="20"/>
+        <image name="rba.png" width="10" height="10"/>
+        <image name="rbn.png" width="10" height="10"/>
+        <image name="rta.png" width="10" height="10"/>
+        <image name="rtn.png" width="10" height="10"/>
+    </resources>
+</document>
