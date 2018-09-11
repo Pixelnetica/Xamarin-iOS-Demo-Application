@@ -69,23 +69,4 @@
             <point key="canvasLocation" x="34" y="54"/>
         </view>
     </objects>
-    <resources>
-        <image name="batch_radio_rotate_ccw.png" width="29" height="29"/>
-        <image name="batch_radio_rotate_cw.png" width="29" height="29"/>
-        <image name="camera-torch.png" width="20" height="20"/>
-        <image name="camera-torch_off.png" width="20" height="20"/>
-        <image name="lba.png" width="10" height="10"/>
-        <image name="lbn.png" width="10" height="10"/>
-        <image name="lta.png" width="10" height="10"/>
-        <image name="ltn.png" width="10" height="10"/>
-        <image name="photoSnap.png" width="67" height="67"/>
-        <image name="profile_button_bw.png" width="20" height="20"/>
-        <image name="profile_button_color.png" width="20" height="20"/>
-        <image name="profile_button_gray.png" width="20" height="20"/>
-        <image name="profile_button_original.png" width="20" height="20"/>
-        <image name="rba.png" width="10" height="10"/>
-        <image name="rbn.png" width="10" height="10"/>
-        <image name="rta.png" width="10" height="10"/>
-        <image name="rtn.png" width="10" height="10"/>
-    </resources>
 </document>

@@ -86,16 +86,16 @@
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
     <Reference Include="DSSDKWrapper">
-      <HintPath>..\packages\DocScanningSDK.Pixelnetica.1.0.0\lib\xamarinios10\DSSDKWrapper.dll</HintPath>
+      <HintPath>..\packages\Pixelnetica.DSSDK.Xamarin.iOS.2.3.0\lib\xamarinios10\DSSDKWrapper.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ImageAsset Include="Assets.xcassets\Contents.json" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\batch_radio_rotate_ccw.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\batch_radio_rotate_cw.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\camera-torch.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\camera-torch_off.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Contents.json" />
     <ImageAsset Include="Assets.xcassets\lba.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\lbn.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\lta.imageset\Contents.json" />
@@ -109,9 +109,45 @@
     <ImageAsset Include="Assets.xcassets\rbn.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\rta.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\rtn.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\lta.imageset\lta.png" />
+    <ImageAsset Include="Assets.xcassets\batch_radio_rotate_ccw.imageset\batch_radio_rotate_ccw.png" />
+    <ImageAsset Include="Assets.xcassets\batch_radio_rotate_ccw.imageset\batch_radio_rotate_ccw%402x.png" />
+    <ImageAsset Include="Assets.xcassets\batch_radio_rotate_ccw.imageset\batch_radio_rotate_ccw%403x.png" />
+    <ImageAsset Include="Assets.xcassets\batch_radio_rotate_cw.imageset\batch_radio_rotate_cw.png" />
+    <ImageAsset Include="Assets.xcassets\batch_radio_rotate_cw.imageset\batch_radio_rotate_cw%402x.png" />
+    <ImageAsset Include="Assets.xcassets\batch_radio_rotate_cw.imageset\batch_radio_rotate_cw%403x.png" />
+    <ImageAsset Include="Assets.xcassets\camera-torch.imageset\camera-torch.png" />
+    <ImageAsset Include="Assets.xcassets\camera-torch.imageset\camera-torch%402x.png" />
+    <ImageAsset Include="Assets.xcassets\camera-torch.imageset\camera-torch%403x.png" />
+    <ImageAsset Include="Assets.xcassets\camera-torch_off.imageset\camera-torch_off.png" />
+    <ImageAsset Include="Assets.xcassets\camera-torch_off.imageset\camera-torch_off%402x.png" />
+    <ImageAsset Include="Assets.xcassets\camera-torch_off.imageset\camera-torch_off%403x.png" />
+    <ImageAsset Include="Assets.xcassets\photoSnap.imageset\photoSnap.png" />
+    <ImageAsset Include="Assets.xcassets\photoSnap.imageset\photoSnap%402x.png" />
+    <ImageAsset Include="Assets.xcassets\photoSnap.imageset\photoSnap%403x.png" />
+    <ImageAsset Include="Assets.xcassets\lbn.imageset\lbn.png" />
+    <ImageAsset Include="Assets.xcassets\lba.imageset\lba.png" />
+    <ImageAsset Include="Assets.xcassets\rtn.imageset\rtn.png" />
+    <ImageAsset Include="Assets.xcassets\rta.imageset\rta.png" />
+    <ImageAsset Include="Assets.xcassets\profile_button_bw.imageset\profile_button_bw.png" />
+    <ImageAsset Include="Assets.xcassets\profile_button_bw.imageset\profile_button_bw%402x.png" />
+    <ImageAsset Include="Assets.xcassets\profile_button_bw.imageset\profile_button_bw%403x.png" />
+    <ImageAsset Include="Assets.xcassets\profile_button_original.imageset\profile_button_original.png" />
+    <ImageAsset Include="Assets.xcassets\profile_button_original.imageset\profile_button_original%402x.png" />
+    <ImageAsset Include="Assets.xcassets\profile_button_original.imageset\profile_button_original%403x.png" />
+    <ImageAsset Include="Assets.xcassets\profile_button_gray.imageset\profile_button_gray.png" />
+    <ImageAsset Include="Assets.xcassets\profile_button_gray.imageset\profile_button_gray%402x.png" />
+    <ImageAsset Include="Assets.xcassets\profile_button_gray.imageset\profile_button_gray%403x.png" />
+    <ImageAsset Include="Assets.xcassets\profile_button_color.imageset\profile_button_color.png" />
+    <ImageAsset Include="Assets.xcassets\profile_button_color.imageset\profile_button_color%402x.png" />
+    <ImageAsset Include="Assets.xcassets\profile_button_color.imageset\profile_button_color%403x.png" />
+    <ImageAsset Include="Assets.xcassets\ltn.imageset\ltn.png" />
+    <ImageAsset Include="Assets.xcassets\rbn.imageset\rbn.png" />
+    <ImageAsset Include="Assets.xcassets\rba.imageset\rba.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="Assets.xcassets\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -191,12 +227,12 @@
     <BundleResource Include="Resources\batch_radio_rotate_cw.png" />
     <BundleResource Include="Resources\batch_radio_rotate_cw%402x.png" />
     <BundleResource Include="Resources\batch_radio_rotate_cw%403x.png" />
-    <BundleResource Include="Resources\camera-torch.png" />
-    <BundleResource Include="Resources\camera-torch%402x.png" />
-    <BundleResource Include="Resources\camera-torch%403x.png" />
     <BundleResource Include="Resources\camera-torch_off.png" />
     <BundleResource Include="Resources\camera-torch_off%402x.png" />
     <BundleResource Include="Resources\camera-torch_off%403x.png" />
+    <BundleResource Include="Resources\camera-torch.png" />
+    <BundleResource Include="Resources\camera-torch%402x.png" />
+    <BundleResource Include="Resources\camera-torch%403x.png" />
     <BundleResource Include="Resources\lba.png" />
     <BundleResource Include="Resources\lbn.png" />
     <BundleResource Include="Resources\lta.png" />
