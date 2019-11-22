@@ -13,9 +13,28 @@ namespace DSSDKdemo
         public SettingsViewController() : base( "SettingsViewController", null )
         {
         }
-        	
+
         public override void ViewDidLoad()
 		{
+            /*
+            {
+                var topView = this.NavBar;
+                var bottomView = this.TableView;
+
+                var layoutGuide = this.View.SafeAreaLayoutGuide;
+                if (layoutGuide == null)
+                {
+                    topView.TopAnchor.ConstraintEqualTo(this.View.TopAnchor).Active = true;
+                    bottomView.BottomAnchor.ConstraintEqualTo(this.View.BottomAnchor).Active = true;
+                }
+                else
+                {
+                    topView.TopAnchor.ConstraintEqualTo(layoutGuide.TopAnchor).Active = true;
+                    bottomView.BottomAnchor.ConstraintEqualTo(layoutGuide.BottomAnchor).Active = true;
+                }
+            }
+            */
+
             base.ViewDidLoad();
 
             UITableView tableView = this.TableView;
@@ -32,9 +51,9 @@ namespace DSSDKdemo
             this.TableView.Source = null;
 
             base.ViewDidUnload();
-		}
+        }
 
-		partial void CloseView( UIButton sender )
+        partial void CloseView( UIButton sender )
         {
             DismissViewController( true, null );
         }
@@ -322,6 +341,8 @@ namespace DSSDKdemo
                     {
                         AboutViewController vc = new AboutViewController();
 
+                        vc.ModalPresentationStyle = UIModalPresentationStyle.FullScreen;
+
                         viewController.PresentViewController( vc, true, null );
 
                         break;
@@ -335,5 +356,5 @@ namespace DSSDKdemo
                 }
             }
         }
-	}
+    }
 }

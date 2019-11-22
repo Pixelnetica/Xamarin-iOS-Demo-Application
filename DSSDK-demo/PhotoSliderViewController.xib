@@ -32,7 +32,7 @@
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="69"/>
                         <barButtonItem title="Settings" id="6H1-RX-pj7">
                             <connections>
-                                <action selector="SettingsAction:" destination="-1" id="VT4-XA-dXs"/>
+                                <action selector="SettingsAction:" destination="-1" id="3503"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="KNe-x0-5O5"/>

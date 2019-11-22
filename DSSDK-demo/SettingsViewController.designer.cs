@@ -15,6 +15,10 @@ namespace DSSDKdemo
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIView NavBar { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITableView TableView { get; set; }
 
         [Action ("CloseView:")]
@@ -23,6 +27,11 @@ namespace DSSDKdemo
 
         void ReleaseDesignerOutlets ()
         {
+            if (NavBar != null) {
+                NavBar.Dispose ();
+                NavBar = null;
+            }
+
             if (TableView != null) {
                 TableView.Dispose ();
                 TableView = null;

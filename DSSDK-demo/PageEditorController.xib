@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useSafeAreas="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PageEditorController">
@@ -18,7 +19,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
             <subviews>
-                <navigationBar tag="100" contentMode="scaleToFill" barStyle="blackTranslucent" translatesAutoresizingMaskIntoConstraints="NO" id="4">
+                <navigationBar tag="100" contentMode="scaleToFill" barStyle="blackTranslucent" translatesAutoresizingMaskIntoConstraints="NO" id="4" misplaced="YES" ambiguous="YES">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="hyj-22-6Yg"/>
@@ -37,8 +38,9 @@
                             </barButtonItem>
                         </navigationItem>
                     </items>
+                    <viewLayoutGuide key="safeArea" id="2725"/>
                 </navigationBar>
-                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" tag="101" contentMode="scaleToFill" barStyle="blackTranslucent" translatesAutoresizingMaskIntoConstraints="NO" id="10">
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" tag="101" contentMode="scaleToFill" barStyle="blackTranslucent" translatesAutoresizingMaskIntoConstraints="NO" id="10" misplaced="YES" ambiguous="YES">
                     <rect key="frame" x="0.0" y="692" width="414" height="44"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="3dT-m7-Ckv"/>
@@ -47,26 +49,29 @@
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="14"/>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="16"/>
                     </items>
+                    <viewLayoutGuide key="safeArea" id="2980"/>
                 </toolbar>
-                <view clipsSubviews="YES" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="21" customClass="MyImageView">
+                <view clipsSubviews="YES" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="21" customClass="MyImageView" misplaced="YES" ambiguous="YES">
                     <rect key="frame" x="0.0" y="44" width="414" height="648"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <viewLayoutGuide key="safeArea" id="2916"/>
                 </view>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="10" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="0m2-S2-1nE"/>
                 <constraint firstItem="21" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="3Gf-wN-F9N"/>
-                <constraint firstAttribute="bottom" secondItem="10" secondAttribute="bottom" id="4tg-wx-GaQ"/>
+                <constraint firstItem="2661" firstAttribute="bottom" secondItem="10" secondAttribute="bottom" id="4tg-wx-GaQ"/>
                 <constraint firstItem="10" firstAttribute="top" secondItem="21" secondAttribute="bottom" id="6YT-ZB-hcm"/>
                 <constraint firstItem="21" firstAttribute="top" secondItem="4" secondAttribute="bottom" id="OrQ-BQ-dMG"/>
                 <constraint firstItem="4" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="YBk-oJ-VCF"/>
                 <constraint firstAttribute="trailing" secondItem="4" secondAttribute="trailing" id="YpJ-mZ-9i0"/>
                 <constraint firstAttribute="trailing" secondItem="10" secondAttribute="trailing" id="bR4-Vo-mrq"/>
-                <constraint firstItem="4" firstAttribute="top" secondItem="1" secondAttribute="top" id="hfw-6Q-fyh"/>
+                <constraint firstItem="4" firstAttribute="top" secondItem="2661" secondAttribute="top" id="hfw-6Q-fyh"/>
                 <constraint firstAttribute="trailing" secondItem="21" secondAttribute="trailing" id="yiN-h9-mbb"/>
             </constraints>
             <point key="canvasLocation" x="34" y="54"/>
+            <viewLayoutGuide key="safeArea" id="2661"/>
         </view>
     </objects>
 </document>

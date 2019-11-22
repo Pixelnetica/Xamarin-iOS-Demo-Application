@@ -15,15 +15,6 @@ namespace DSSDKdemo
     {
         void ReleaseDesignerOutlets ()
         {
-            if (ViewController != null) {
-                ViewController.Dispose ();
-                ViewController = null;
-            }
-
-            if (Window != null) {
-                Window.Dispose ();
-                Window = null;
-            }
         }
     }
 }

@@ -15,6 +15,10 @@ namespace DSSDKdemo
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIView MainView { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIWebView WebView { get; set; }
 
         [Action ("CloseView:")]
@@ -23,6 +27,11 @@ namespace DSSDKdemo
 
         void ReleaseDesignerOutlets ()
         {
+            if (MainView != null) {
+                MainView.Dispose ();
+                MainView = null;
+            }
+
             if (WebView != null) {
                 WebView.Dispose ();
                 WebView = null;

@@ -151,6 +151,8 @@ namespace DSSDKdemo
         {
             SettingsViewController vc = new SettingsViewController();
 
+            vc.ModalPresentationStyle = UIModalPresentationStyle.OverFullScreen;
+
             PresentViewController( vc, false, null );
         }
 
@@ -233,12 +235,13 @@ namespace DSSDKdemo
         {
             imagePickerController.SourceType = sourceType;
             imagePickerController.AllowsEditing = false;
+            imagePickerController.ModalPresentationStyle = UIModalPresentationStyle.FullScreen;
         }
 
         private void LoadPhoto( UIImage image, string path )
         {
-            PxMetaImage metaImage = PxMetaImage.CreateWithPath( image, path );
-
+            PxMetaImage metaImage = PxMetaImage.CreateWithPath(image, path);
+            
             LoadPhoto( metaImage );
         }
 
@@ -300,6 +303,7 @@ namespace DSSDKdemo
 
                 PageEditorController pageEditor = new PageEditorController( this.inImage.Image, cg_points );
                 pageEditor.Delegate = this;
+                pageEditor.ModalPresentationStyle = UIModalPresentationStyle.FullScreen;
 
                 this.PresentViewController( pageEditor, false, null );
             }

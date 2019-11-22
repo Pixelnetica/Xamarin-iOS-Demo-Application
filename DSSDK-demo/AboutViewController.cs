@@ -12,8 +12,8 @@ namespace DSSDKdemo
         {
         }
 
-	public override void ViewDidLoad()
-	{
+	    public override void ViewDidLoad()
+	    {
             base.ViewDidLoad();
 
             String plist_path = NSBundle.MainBundle.PathForResource( "Info.plist", null );

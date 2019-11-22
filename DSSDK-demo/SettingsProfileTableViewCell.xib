@@ -20,7 +20,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ssc-km-FUd">
-                        <rect key="frame" x="24" y="11.5" width="110" height="21"/>
+                        <rect key="frame" x="28" y="11.5" width="110" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="Lg9-MN-EWp"/>
                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="110" id="ZHO-fL-n81"/>
@@ -42,7 +42,4 @@
             </connections>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="batch_radio_rotate_ccw.png" width="29" height="29"/>
-    </resources>
 </document>
