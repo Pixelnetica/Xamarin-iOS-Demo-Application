@@ -2,3 +2,4 @@
 DSSDK-demo/bin
 DSSDK-demo/obj
 packages
+.DS_Store
