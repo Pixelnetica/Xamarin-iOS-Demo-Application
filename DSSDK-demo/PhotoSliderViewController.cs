@@ -240,14 +240,14 @@ namespace DSSDKdemo
 
         private void LoadPhoto( UIImage image, string path )
         {
-            PxMetaImage metaImage = PxMetaImage.CreateWithPath(image, path);
+            PxMetaImage metaImage = new PxMetaImage( image, path );
             
             LoadPhoto( metaImage );
         }
 
         private void LoadPhoto( UIImage image, NSDictionary metadata )
         {
-            PxMetaImage metaImage = PxMetaImage.CreateWithMetadata( image, metadata );
+            PxMetaImage metaImage = new PxMetaImage( image, metadata );
 
             LoadPhoto( metaImage );
         }

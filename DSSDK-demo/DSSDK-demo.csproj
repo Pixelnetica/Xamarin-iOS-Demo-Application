@@ -89,8 +89,9 @@
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
     <Reference Include="DSSDKWrapper">
-      <HintPath>..\packages\Pixelnetica.DSSDK.Xamarin.iOS.2.4.0\lib\xamarinios10\DSSDKWrapper.dll</HintPath>
+      <HintPath>..\packages\Pixelnetica.DSSDK.Xamarin.iOS.2.4.1\lib\xamarinios10\DSSDKWrapper.dll</HintPath>
     </Reference>
+    <Reference Include="System.Drawing.Common.dll" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
