@@ -36,14 +36,13 @@
     <DefineConstants></DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodesignKey>iPhone Developer: Dmitry Harchenko (FPY2X3YPK7)</CodesignKey>
+    <CodesignKey>iPhone Developer</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <MtouchLink>SdkOnly</MtouchLink>
     <MtouchArch>ARMv7, ARM64</MtouchArch>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
     <MtouchVerbosity></MtouchVerbosity>
     <MtouchUseLlvm>true</MtouchUseLlvm>
-    <CodesignProvision>VS: com.pixelnetica.DSSDK-xamarin-demo Development</CodesignProvision>
     <MtouchFloat32>true</MtouchFloat32>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
@@ -88,10 +87,10 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
-    <Reference Include="DSSDKWrapper">
-      <HintPath>..\packages\Pixelnetica.DSSDK.Xamarin.iOS.2.4.1\lib\xamarinios10\DSSDKWrapper.dll</HintPath>
-    </Reference>
     <Reference Include="System.Drawing.Common.dll" />
+    <Reference Include="DSSDKWrapper">
+      <HintPath>..\packages\Pixelnetica.DSSDK.Xamarin.iOS.2.5.1\lib\xamarinios10\DSSDKWrapper.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />

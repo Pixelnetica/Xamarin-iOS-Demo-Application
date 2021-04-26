@@ -17,8 +17,8 @@ The documentation for DSSDK Xamarin.iOS can be found by the link below:
 
 ## License
 
-Document Scanning SDK trial version comes with _Trial License Key_ bound to demo application.  
-It could also be utilised in other applications for __development and testing purpose only__ where it will generate final images (documents) with watermarks.
+By default application source code bundled with _Demo license_ which puts watermarks on resulted images. 
+To get full featured _Free Trial license_ please [__contact us__](https://www.pixelnetica.com/products/document-scanning-sdk/sdk-support.html?utm_source=EasyScan&utm_medium=src-xamarin_ios&utm_campaign=read_me&utm_content=dssdk-license "Request information or Free Trial DSSDK license").
 
 It is strictly prohibited to distribute, market, publish to application stores like, but not limited, AppStore, Google Play, etc or use other than for development or staging purposes Pixelnetica Document Scanning SDK trial license.
 
