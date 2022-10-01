@@ -59,7 +59,7 @@ namespace DSSDKdemo
                 <p>Pixelnetica Document Scanning SDK
                 <p>Version {0}
                 <p>For more information, visit
-                <p><a target=""_blank"" href=""http://www.pixelnetica.com/products/document-scanning-sdk/mobile-document-capture-sdk.html"">Document Scanning SDK page</a>
+                <p><a target=""_blank"" href=""https://www.pixelnetica.com/products/document-scanning-sdk/document-scanner-sdk.html?utm_source=EasyScan&utm_medium=src-xamarin_ios&utm_campaign=scr-about&utm_content=dssdk-overview"">Document Scanning SDK page</a>
                 <p>© Pixelnetica {1}
                 <p>
                 </div>

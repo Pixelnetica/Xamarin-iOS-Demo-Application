@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -9,6 +9,7 @@
     <RootNamespace>DSSDKdemo</RootNamespace>
     <AssemblyName>DSSDK-demo</AssemblyName>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <ProvisioningType>manual</ProvisioningType>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>
@@ -24,41 +25,52 @@
     <MtouchFastDev>true</MtouchFastDev>
     <IOSDebuggerPort>53382</IOSDebuggerPort>
     <MtouchLink>SdkOnly</MtouchLink>
-    <MtouchArch>x86_64</MtouchArch>
+    <MtouchArch>i386</MtouchArch>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
     <DeviceSpecificBuild>false</DeviceSpecificBuild>
-    <MtouchVerbosity></MtouchVerbosity>
+    <MtouchVerbosity>
+    </MtouchVerbosity>
     <CodesignProvision>VS: WildCard Development</CodesignProvision>
+    <MtouchExtraArgs> --linkskip libPxl3rdparty  -gcc_flags "-lstdc++"</MtouchExtraArgs>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <Optimize>true</Optimize>
     <OutputPath>bin\iPhone\Release</OutputPath>
-    <DefineConstants></DefineConstants>
+    <DefineConstants>
+    </DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <CodesignKey>iPhone Developer</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <MtouchLink>SdkOnly</MtouchLink>
-    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <MtouchArch>ARM64</MtouchArch>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
-    <MtouchVerbosity></MtouchVerbosity>
+    <MtouchVerbosity>
+    </MtouchVerbosity>
     <MtouchUseLlvm>true</MtouchUseLlvm>
-    <MtouchFloat32>true</MtouchFloat32>
+<CodesignProvision>Automatic</CodesignProvision>
+<MtouchEnableSGenConc>true</MtouchEnableSGenConc>
+<MtouchInterpreter>-all</MtouchInterpreter>
+<MtouchExtraArgs>--linkskip libPxl3rdparty  -gcc_flags "-lstdc++"</MtouchExtraArgs>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
-    <DefineConstants></DefineConstants>
+    <DefineConstants>
+    </DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <CodesignKey>iPhone Developer: Dmitry Harchenko (FPY2X3YPK7)</CodesignKey>
     <MtouchLink>Full</MtouchLink>
     <MtouchArch>x86_64</MtouchArch>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
-    <MtouchVerbosity></MtouchVerbosity>
+    <MtouchVerbosity>
+    </MtouchVerbosity>
     <MtouchUseLlvm>true</MtouchUseLlvm>
     <CodesignProvision>VS: WildCard Development</CodesignProvision>
+    <MtouchExtraArgs> --linkskip libPxl3rdparty  -gcc_flags "-lstdc++"</MtouchExtraArgs>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
     <DebugSymbols>true</DebugSymbols>
@@ -68,19 +80,27 @@
     <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodesignKey>iPhone Developer: Dmitry Harchenko (FPY2X3YPK7)</CodesignKey>
-    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <DeviceSpecificBuild>false</DeviceSpecificBuild>
     <MtouchDebug>true</MtouchDebug>
     <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
-    <MtouchFastDev>true</MtouchFastDev>
-    <MtouchFloat32>true</MtouchFloat32>
+    <MtouchFastDev>false</MtouchFastDev>
+    <MtouchFloat32>false</MtouchFloat32>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <IOSDebuggerPort>17265</IOSDebuggerPort>
-    <MtouchLink>SdkOnly</MtouchLink>
-    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>ARM64</MtouchArch>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
-    <MtouchVerbosity></MtouchVerbosity>
-    <CodesignProvision>VS: WildCard Development</CodesignProvision>
+    <MtouchVerbosity>
+    </MtouchVerbosity>
+    <CodesignProvision>
+    </CodesignProvision>
+    <MtouchExtraArgs> --linkskip libPxl3rdparty  -gcc_flags "-lstdc++"</MtouchExtraArgs>
+    <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
+    <MtouchInterpreter>-all</MtouchInterpreter>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
+    <AppExtensionDebugBundleId />
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -88,68 +108,178 @@
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
     <Reference Include="System.Drawing.Common.dll" />
-    <Reference Include="DSSDKWrapper">
-      <HintPath>..\packages\Pixelnetica.DSSDK.Xamarin.iOS.2.5.1\lib\xamarinios10\DSSDKWrapper.dll</HintPath>
+    <Reference Include="ImageSdkWrapper.Common">
+      <HintPath>..\packages\ImageSDK.Pixelnetica.2.6.4\lib\Xamarin.iOS10\ImageSdkWrapper.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageSdkWrapper.iOS.Native">
+      <HintPath>..\packages\ImageSDK.Pixelnetica.2.6.4\lib\Xamarin.iOS10\ImageSdkWrapper.iOS.Native.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\batch_radio_rotate_ccw.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\batch_radio_rotate_cw.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\camera-torch.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\camera-torch_off.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\lba.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\lbn.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\lta.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\ltn.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\photoSnap.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\profile_button_bw.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\profile_button_color.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\profile_button_gray.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\profile_button_original.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\rba.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\rbn.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\rta.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\rtn.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\lta.imageset\lta.png" />
-    <ImageAsset Include="Assets.xcassets\batch_radio_rotate_ccw.imageset\batch_radio_rotate_ccw.png" />
-    <ImageAsset Include="Assets.xcassets\batch_radio_rotate_ccw.imageset\batch_radio_rotate_ccw%402x.png" />
-    <ImageAsset Include="Assets.xcassets\batch_radio_rotate_ccw.imageset\batch_radio_rotate_ccw%403x.png" />
-    <ImageAsset Include="Assets.xcassets\batch_radio_rotate_cw.imageset\batch_radio_rotate_cw.png" />
-    <ImageAsset Include="Assets.xcassets\batch_radio_rotate_cw.imageset\batch_radio_rotate_cw%402x.png" />
-    <ImageAsset Include="Assets.xcassets\batch_radio_rotate_cw.imageset\batch_radio_rotate_cw%403x.png" />
-    <ImageAsset Include="Assets.xcassets\camera-torch.imageset\camera-torch.png" />
-    <ImageAsset Include="Assets.xcassets\camera-torch.imageset\camera-torch%402x.png" />
-    <ImageAsset Include="Assets.xcassets\camera-torch.imageset\camera-torch%403x.png" />
-    <ImageAsset Include="Assets.xcassets\camera-torch_off.imageset\camera-torch_off.png" />
-    <ImageAsset Include="Assets.xcassets\camera-torch_off.imageset\camera-torch_off%402x.png" />
-    <ImageAsset Include="Assets.xcassets\camera-torch_off.imageset\camera-torch_off%403x.png" />
-    <ImageAsset Include="Assets.xcassets\photoSnap.imageset\photoSnap.png" />
-    <ImageAsset Include="Assets.xcassets\photoSnap.imageset\photoSnap%402x.png" />
-    <ImageAsset Include="Assets.xcassets\photoSnap.imageset\photoSnap%403x.png" />
-    <ImageAsset Include="Assets.xcassets\lbn.imageset\lbn.png" />
-    <ImageAsset Include="Assets.xcassets\lba.imageset\lba.png" />
-    <ImageAsset Include="Assets.xcassets\rtn.imageset\rtn.png" />
-    <ImageAsset Include="Assets.xcassets\rta.imageset\rta.png" />
-    <ImageAsset Include="Assets.xcassets\profile_button_bw.imageset\profile_button_bw.png" />
-    <ImageAsset Include="Assets.xcassets\profile_button_bw.imageset\profile_button_bw%402x.png" />
-    <ImageAsset Include="Assets.xcassets\profile_button_bw.imageset\profile_button_bw%403x.png" />
-    <ImageAsset Include="Assets.xcassets\profile_button_original.imageset\profile_button_original.png" />
-    <ImageAsset Include="Assets.xcassets\profile_button_original.imageset\profile_button_original%402x.png" />
-    <ImageAsset Include="Assets.xcassets\profile_button_original.imageset\profile_button_original%403x.png" />
-    <ImageAsset Include="Assets.xcassets\profile_button_gray.imageset\profile_button_gray.png" />
-    <ImageAsset Include="Assets.xcassets\profile_button_gray.imageset\profile_button_gray%402x.png" />
-    <ImageAsset Include="Assets.xcassets\profile_button_gray.imageset\profile_button_gray%403x.png" />
-    <ImageAsset Include="Assets.xcassets\profile_button_color.imageset\profile_button_color.png" />
-    <ImageAsset Include="Assets.xcassets\profile_button_color.imageset\profile_button_color%402x.png" />
-    <ImageAsset Include="Assets.xcassets\profile_button_color.imageset\profile_button_color%403x.png" />
-    <ImageAsset Include="Assets.xcassets\ltn.imageset\ltn.png" />
-    <ImageAsset Include="Assets.xcassets\rbn.imageset\rbn.png" />
-    <ImageAsset Include="Assets.xcassets\rba.imageset\rba.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\batch_radio_rotate_ccw.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\batch_radio_rotate_cw.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\camera-torch.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\camera-torch_off.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\lba.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\lbn.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\lta.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ltn.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\photoSnap.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\profile_button_bw.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\profile_button_color.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\profile_button_gray.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\profile_button_original.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\rba.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\rbn.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\rta.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\rtn.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\lta.imageset\lta.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\batch_radio_rotate_ccw.imageset\batch_radio_rotate_ccw.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\batch_radio_rotate_ccw.imageset\batch_radio_rotate_ccw%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\batch_radio_rotate_ccw.imageset\batch_radio_rotate_ccw%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\batch_radio_rotate_cw.imageset\batch_radio_rotate_cw.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\batch_radio_rotate_cw.imageset\batch_radio_rotate_cw%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\batch_radio_rotate_cw.imageset\batch_radio_rotate_cw%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\camera-torch.imageset\camera-torch.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\camera-torch.imageset\camera-torch%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\camera-torch.imageset\camera-torch%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\camera-torch_off.imageset\camera-torch_off.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\camera-torch_off.imageset\camera-torch_off%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\camera-torch_off.imageset\camera-torch_off%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\photoSnap.imageset\photoSnap.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\photoSnap.imageset\photoSnap%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\photoSnap.imageset\photoSnap%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\lbn.imageset\lbn.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\lba.imageset\lba.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\rtn.imageset\rtn.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\rta.imageset\rta.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\profile_button_bw.imageset\profile_button_bw.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\profile_button_bw.imageset\profile_button_bw%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\profile_button_bw.imageset\profile_button_bw%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\profile_button_original.imageset\profile_button_original.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\profile_button_original.imageset\profile_button_original%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\profile_button_original.imageset\profile_button_original%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\profile_button_gray.imageset\profile_button_gray.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\profile_button_gray.imageset\profile_button_gray%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\profile_button_gray.imageset\profile_button_gray%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\profile_button_color.imageset\profile_button_color.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\profile_button_color.imageset\profile_button_color%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\profile_button_color.imageset\profile_button_color%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ltn.imageset\ltn.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\rbn.imageset\rbn.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\rba.imageset\rba.png">
+      <Visible>false</Visible>
+    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\" />
     <Folder Include="Assets.xcassets\" />
   </ItemGroup>
   <ItemGroup>
