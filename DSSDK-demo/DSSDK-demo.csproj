@@ -109,10 +109,10 @@
     <Reference Include="Xamarin.iOS" />
     <Reference Include="System.Drawing.Common.dll" />
     <Reference Include="ImageSdkWrapper.Common">
-      <HintPath>..\packages\ImageSDK.Pixelnetica.2.6.4\lib\Xamarin.iOS10\ImageSdkWrapper.Common.dll</HintPath>
+      <HintPath>..\packages\ImageSDK.Pixelnetica.3.0.5.5\lib\Xamarin.iOS10\ImageSdkWrapper.Common.dll</HintPath>
     </Reference>
     <Reference Include="ImageSdkWrapper.iOS.Native">
-      <HintPath>..\packages\ImageSDK.Pixelnetica.2.6.4\lib\Xamarin.iOS10\ImageSdkWrapper.iOS.Native.dll</HintPath>
+      <HintPath>..\packages\ImageSDK.Pixelnetica.3.0.5.5\lib\Xamarin.iOS10\ImageSdkWrapper.iOS.Native.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
